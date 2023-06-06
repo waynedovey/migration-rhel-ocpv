@@ -1,0 +1,31 @@
+apiVersion: forklift.konveyor.io/v1beta1
+kind: Plan
+metadata:
+  generation: 1
+  name: test
+  namespace: openshift-mtv
+spec:
+  archived: false
+  description: ""
+  map:
+    network:
+      name: test-network
+      namespace: openshift-mtv
+    storage:
+      name: test-storage
+      namespace: openshift-mtv
+  provider:
+    destination:
+      name: host
+      namespace: openshift-mtv
+    source:
+      name: lab-vsphere-provider
+      namespace: openshift-mtv
+  targetNamespace: stores-es
+  vms:
+  - hooks:
+    - hook:
+        name: test-hook
+        namespace: openshift-mtv
+      step: PostHook
+  warm: false
