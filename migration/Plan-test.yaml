@@ -19,7 +19,7 @@ spec:
       name: host
       namespace: openshift-mtv
     source:
-      name: lab-vsphere-provider
+      name: vmware-test-lab
       namespace: openshift-mtv
   targetNamespace: stores-es
   vms:
@@ -28,5 +28,5 @@ spec:
         name: test-hook
         namespace: openshift-mtv
       step: PostHook
-    name: b-5551smnpes001-mig2
+    name: a-5551smnpes001-mig1
   warm: false

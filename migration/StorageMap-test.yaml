@@ -16,5 +16,5 @@ spec:
       name: host
       namespace: openshift-mtv
     source:
-      name: lab-vsphere-provider
+      name: vmware-test-lab
       namespace: openshift-mtv
