@@ -8,9 +8,9 @@ metadata:
 spec:
   map:
   - destination:
-      type: pod
-    source:
-      id: network-13
+      name: vm-vlan101
+      namespace: stores-rs
+      type: multus      
   provider:
     destination:
       name: host
