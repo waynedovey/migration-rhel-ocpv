@@ -1,0 +1,26 @@
+apiVersion: forklift.konveyor.io/v1beta1
+kind: NetworkMap
+metadata:
+  annotations:
+    forklift.konveyor.io/shared: "false"
+  name: es-server-network
+  namespace: openshift-mtv
+spec:
+  map:
+  - destination:
+      name: vm-vlan400
+      namespace: stores-es
+      type: multus
+    source:
+      id: network-14
+  - destination:
+      type: pod
+    source:
+      id: network-13
+  provider:
+    destination:
+      name: host
+      namespace: openshift-mtv
+    source:
+      name: vmware-es-server-lab
+      namespace: openshift-mtv

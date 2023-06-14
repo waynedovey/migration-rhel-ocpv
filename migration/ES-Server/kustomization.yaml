@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: openshift-mtv
+
+resources:
+ - Hook-ES.yaml
+ - NetworkMap-ES.yaml
+ - StorageMap-ES.yaml
+ - Plan-ES.yaml
+ - Migration-ES.yaml

@@ -1,0 +1,20 @@
+apiVersion: forklift.konveyor.io/v1beta1
+kind: StorageMap
+metadata:
+  annotations:
+    forklift.konveyor.io/shared: "false"
+  name: es-server-storage
+  namespace: openshift-mtv
+spec:
+  map:
+  - destination:
+      storageClass: odf-lvm-vg1
+    source:
+      id: datastore-11
+  provider:
+    destination:
+      name: host
+      namespace: openshift-mtv
+    source:
+      name: vmware-es-server-lab
+      namespace: openshift-mtv

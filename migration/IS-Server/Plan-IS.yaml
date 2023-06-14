@@ -1,0 +1,27 @@
+apiVersion: forklift.konveyor.io/v1beta1
+kind: Plan
+metadata:
+  name: is-server
+  namespace: openshift-mtv
+spec:
+  archived: false
+  description: ""
+  map:
+    network:
+      name: is-server
+      namespace: openshift-mtv
+    storage:
+      name: is-server
+      namespace: openshift-mtv
+  provider:
+    destination:
+      name: host
+      namespace: openshift-mtv
+    source:
+      name: lab-vsphere-provider
+      namespace: openshift-mtv
+  targetNamespace: stores-is
+  vms:
+  - hooks: []
+    name: 5551smssis001
+  warm: false
